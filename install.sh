@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 super() {
 	if which sudo; then
@@ -62,4 +62,4 @@ git clone git://github.com/system-setup/system /tmp/system
 
 cd /tmp/system
 
-. sh/continue.sh
+source sh/continue.sh
