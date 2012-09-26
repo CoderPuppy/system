@@ -25,7 +25,7 @@ pkg_mng_yum() {
 	command=$1
 	
 	shift
-		
+
 	case command in
 	install)
 		super yum install $@
@@ -59,3 +59,7 @@ find_pkg_mng() {
 pkg_mng install git
 
 git clone git://github.com/system-setup/system /tmp/system
+
+cd /tmp/system
+
+source sh/continue.sh
