@@ -9,7 +9,7 @@ super() {
 	fi
 }
 
-pkg_mng_apt() {
+pkg_mng_apt_get() {
 	command=$1
 
 	shift
@@ -42,12 +42,12 @@ pkg_mng() {
 	
 	echo "using $pkg_mng"
 	
-	eval "pkg_mng_$pkg_mng $*"
+	pkg_mng_${pkg_mng} $@
 }
 
 find_pkg_mng() {
-	if which aptitude &> /dev/null; then
-		echo "apt"
+	if which apt-get &> /dev/null; then
+		echo "apt_get"
 	elif which yum &> /dev/null; then
 		echo "yum"
 	else
