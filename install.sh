@@ -56,6 +56,8 @@ find_pkg_mng() {
 	fi
 }
 
+#!/bin/bash
+
 pkg_mng install git
 
 git clone git://github.com/system-setup/system /tmp/system
