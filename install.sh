@@ -14,7 +14,7 @@ pkg_mng_apt() {
 
 	shift
 
-	case $command
+	case $command in
 	install)
 		super apt-get install $*
 		;;
