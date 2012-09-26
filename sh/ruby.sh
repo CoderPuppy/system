@@ -1,6 +1,17 @@
 #!/bin/bash
 
-local base="`dirname $BASH_SOURCE`"
-source $base/pkg_mng.sh
+base="`dirname $BASH_SOURCE`"
 
-pkg_mng install ruby
+echo -n "Checking for Ruby: "
+
+if which ruby &> /dev/null; then
+	echo "Yes"
+else
+	echo "No"
+	
+	echo "Installing Ruby"
+
+	source $base/pkg_mng.sh
+	
+	pkg_mng install ruby
+fi

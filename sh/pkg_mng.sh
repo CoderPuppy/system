@@ -38,9 +38,9 @@ pkg_mng=""
 pkg_mng() {
 	if [ "$pkg_mng" = "" ]; then
 		pkg_mng=`find_pkg_mng`
+		
+		echo "Using $pkg_mng"
 	fi
-	
-	echo "using $pkg_mng"
 	
 	pkg_mng_${pkg_mng} $@
 }

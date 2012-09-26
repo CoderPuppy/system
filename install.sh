@@ -58,7 +58,16 @@ find_pkg_mng() {
 
 #!/bin/bash
 
-pkg_mng install git
+echo -n "Checking for Git: "
+
+if which git &> /dev/null; then
+	echo "Yes"
+else
+	echo "No"
+
+	echo "Installing Git"
+	pkg_mng install git
+fi
 
 git clone git://github.com/system-setup/system /tmp/system
 
