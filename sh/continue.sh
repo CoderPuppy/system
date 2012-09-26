@@ -8,4 +8,4 @@ base="`dirname $BASH_SOURCE`"
 # Get Ruby
 source $base/ruby.sh
 
-ruby ../ruby/continue.rb
+ruby $base/../ruby/continue.rb
