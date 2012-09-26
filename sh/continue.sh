@@ -4,6 +4,7 @@
 #   - Git
 #   - Package Manager Support
 
-. ruby.sh
+# Get Ruby
+. ./ruby.sh
 
 ruby ../ruby/continue.rb
